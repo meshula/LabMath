@@ -1,4 +1,6 @@
-# LabCmd
+# LabMath
+
+Work in progress.
 
 copyright 2018 Nick Porcino. BSD 2 clause
 
