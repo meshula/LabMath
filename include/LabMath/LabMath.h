@@ -20,6 +20,7 @@
 
 #include <LabMath/math-common.hpp>
 #include <LabMath/math-projection.hpp>
+#include <LabMath/math-spatial.hpp>
 
 //#define HAVE_GLM
 #define HAVE_LINALG
@@ -73,6 +74,7 @@ namespace lab {
     typedef linalg::vec<float, 2> v2f;
     typedef linalg::vec<float, 3> v3f;
     typedef linalg::vec<float, 4> v4f;
+    typedef linalg::mat<float, 3, 3> m33f;
     typedef linalg::mat<float, 4, 4> m44f;
     typedef linalg::vec<float, 4> quatf;
 #endif
