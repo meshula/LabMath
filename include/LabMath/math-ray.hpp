@@ -1,4 +1,4 @@
-﻿/*
+/*
  * File: math-ray.hpp
  * This header file defines the `Ray` value type and a number of intersection
  * routines against geometric primitives (axis-aligned boxes, spheres, and triangles). 

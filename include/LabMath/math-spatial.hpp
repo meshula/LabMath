@@ -1,4 +1,4 @@
-﻿/* 
+/* 
  * File: math-spatial.hpp
  * This header file defines and implements data structures and algorithms 
  * related to the affine transformation of 3D objects in space. Most of this

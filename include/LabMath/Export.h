@@ -1,7 +1,7 @@
 
 #pragma once
 
-#ifdef _MSC_VER
+#if defined(_MSC_VER) && !defined(LABMATH_STATIC)
 # ifdef BUILDING_LabMath
 #  define LM_CAPI extern "C" __declspec(dllexport)
 #  define LM_API __declspec(dllexport)

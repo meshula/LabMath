@@ -9,6 +9,7 @@ set(LABMATH_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../LabCMake/scripts
                       ${CMAKE_CURRENT_SOURCE_DIR}/../LabCMake/modules)
 
+include(Settings)
 include(Utilities)
 
 lab_library(LabMath
@@ -22,6 +23,7 @@ lab_library(LabMath
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 
     PUBLIC_HEADERS
+        include/LabMath/Export.h
         include/LabMath/LabMath.h
         include/LabMath/linalg.h
         include/LabMath/math-common.hpp
@@ -36,3 +38,12 @@ lab_library(LabMath
     CPPFILES
         src/MathTypes.cpp
 )
+
+
+configure_file(cmake/LabMathConfig.cmake.in 
+    "${PROJECT_BINARY_DIR}/LabMathConfig.cmake" @ONLY)
+install(FILES
+  "${PROJECT_BINARY_DIR}/LabMathConfig.cmake"
+  DESTINATION "${CMAKE_INSTALL_PREFIX}"
+)
+

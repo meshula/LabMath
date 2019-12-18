@@ -1,4 +1,4 @@
-﻿/*
+/*
  * File: math-primitives.hpp
  * This file defines commonly used geometric primitives such as axis-aligned bounding 
  * boxes in 2D and 3D, spheres, planes, segments, lines, and frustums. Although the 

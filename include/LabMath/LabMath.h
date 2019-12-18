@@ -9,11 +9,12 @@
 
 #ifdef near
 # undef near
+#endif
+#ifdef far
 # undef far
 #endif
 
 #include <LabMath/Export.h>
-#include <LabMath/LabMath.h>
 
 #define _USE_MATH_DEFINES
 #include <math.h>
