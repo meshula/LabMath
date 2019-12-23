@@ -1,11 +1,11 @@
 //
-//  Types.h
-//  LabRender
+//  LabMath.h
 //
-//  Copyright (c) 2015 Planet IX. All rights reserved.
+//  Copyright (c) 2015-2019 Nick Porcino
 //
 
-#pragma once
+#ifndef LABMATH_H
+#define LABMATH_H
 
 #ifdef near
 # undef near
@@ -33,6 +33,7 @@
 #ifdef HAVE_LINALG
 #include <LabMath/linalg.h>
 #endif
+
 
 #include <utility>
 #include <ostream>
@@ -453,3 +454,7 @@ namespace lab {
 #define V2F(x, y) v2f(float(x), float(y))
 #define V3F(x, y, z) v3f(float(x), float(y), float(z))
 #define V4F(x, y, z, w) v4f(float(x), float(y), float(z), float(w))
+
+#include <LabMath/Camera.h>
+
+#endif

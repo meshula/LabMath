@@ -23,6 +23,7 @@ lab_library(LabMath
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 
     PUBLIC_HEADERS
+        include/LabMath/Camera.h
         include/LabMath/Export.h
         include/LabMath/LabMath.h
         include/LabMath/linalg.h
@@ -36,9 +37,9 @@ lab_library(LabMath
     PRIVATE_HEADERS
 
     CPPFILES
+        src/Camera.cpp
         src/MathTypes.cpp
 )
-
 
 configure_file(cmake/LabMathConfig.cmake.in 
     "${PROJECT_BINARY_DIR}/LabMathConfig.cmake" @ONLY)
