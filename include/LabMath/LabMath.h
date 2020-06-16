@@ -455,6 +455,4 @@ namespace lab {
 #define V3F(x, y, z) v3f(float(x), float(y), float(z))
 #define V4F(x, y, z, w) v4f(float(x), float(y), float(z), float(w))
 
-#include <LabMath/Camera.h>
-
 #endif
