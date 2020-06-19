@@ -6,8 +6,7 @@ project (LabMath)
 
 set(LABMATH_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
 
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../LabCMake/scripts
-                      ${CMAKE_CURRENT_SOURCE_DIR}/../LabCMake/modules)
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 
 include(Settings)
 include(Utilities)
