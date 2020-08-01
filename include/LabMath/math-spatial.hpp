@@ -175,7 +175,7 @@ namespace polymer
     }
 
     // Decompose rotation of q around the axis vt where q = swing * twist
-    // Twist is a rotation about vt, and swing is a rotation about a vector perpindicular to vt
+    // Twist is a rotation about vt, and swing is a rotation about a vector perpendicular to vt
     // http://www.alinenormoyle.com/weblog/?p=726.
     // A singularity exists when swing is close to 180 degrees.
     inline void decompose_swing_twist(const float4 q, const float3 vt, float4 & swing, float4 & twist)
