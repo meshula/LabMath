@@ -206,7 +206,7 @@ function(_lab_library_detail NAME)
     # Set up the install.
     #
 
-    if (args_TYPE STREQUAL "SHARED")
+    if (WIN32 AND args_TYPE STREQUAL "SHARED")
         install(
             FILES
                 $<TARGET_PDB_FILE:${NAME}>

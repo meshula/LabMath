@@ -13,6 +13,6 @@
 # endif
 #else
 # define LM_API
-# define LM_CAPI
+# define LM_CAPI extern "C"
 # define LM_CLASS
 #endif

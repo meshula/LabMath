@@ -74,9 +74,9 @@ namespace lab {
         rotate(mat, rotation.z, { 0, 0, 1 });
 
         float validScale[3];
-        validScale[0] = fabsf(scale.x) < FLT_EPSILON ? 0.001f : scale.x;
-        validScale[1] = fabsf(scale.y) < FLT_EPSILON ? 0.001f : scale.y;
-        validScale[2] = fabsf(scale.z) < FLT_EPSILON ? 0.001f : scale.z;
+        validScale[0] = fabsf(scale.x) < 0.001f ? 0.001f : scale.x;
+        validScale[1] = fabsf(scale.y) < 0.001f ? 0.001f : scale.y;
+        validScale[2] = fabsf(scale.z) < 0.001f ? 0.001f : scale.z;
 
         for (int i = 0; i < 3; ++i)
             mat[i] *= validScale[i];

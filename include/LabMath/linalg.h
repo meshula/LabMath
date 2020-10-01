@@ -399,7 +399,7 @@ namespace linalg
     template<class T, int M> constexpr mat<T,M,4> outerprod(const vec<T,M> & a, const vec<T,4> & b)      { return {a*b.x, a*b.y, a*b.z, a*b.w}; }
 
     // Support for spinor algebra using 4D vectors, representing xi + yj
-    template<class T> constexpr vec<T,2>             sinv(const vec<T,2> & s)                            { const auto v = s.x*s.x + s.y*sy; return {s.x*v, s.y* -v}; }
+    template<class T> constexpr vec<T,2>             sinv(const vec<T,2> & s)                            { const auto v = s.x*s.x + s.y*s.y; return {s.x*v, s.y* -v}; }
     template<class T> vec<T,2>                       sset(const T a)                                     { return {std::cos(a), std::sin(a)};}
     template<class T> constexpr vec<T,2>             smul (const vec<T,2> & a, const vec<T,2> & b)       { return {a.x*b.x - a.y*b.y, a.x*b.y + b.x*a.y}; }
     template<class T, class... R> constexpr vec<T,2> smul(const vec<T,2> & a, R... r)                    { return smul(a, smul(r...)); }
@@ -572,7 +572,7 @@ template<class T> linalg::mat<T,4,4> linalg::frustum_matrix(T x0, T x1, T y0, T 
 
 template<class T> linalg::vec<T,2> linalg::sslerp(const vec<T,2> & a, const vec<T,2> & b, T t)
 {
-    T cosine = a.x*b.x + a.y*b.y;
+    T cosom = a.x*b.x + a.y*b.y;
     T ti, tj;
     if (cosom < 0) {
         cosom = -cosom;
@@ -597,8 +597,8 @@ template<class T> linalg::vec<T,2> linalg::sslerp(const vec<T,2> & a, const vec<
         scale1 = t;
     }
 
-    return r{scale0 * start.i + scale1 * ti,
-             scale0 * start.j + scale1 * tj};
+    return {scale0 * a.i + scale1 * ti,
+             scale0 * a.j + scale1 * tj};
 }
 
 #endif
