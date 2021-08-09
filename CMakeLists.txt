@@ -16,7 +16,7 @@ include(Settings)
 include(Utilities)
 
 lab_library(LabMath
-    TYPE SHARED
+    TYPE STATIC
 
     ALIAS Lab::Math
 
